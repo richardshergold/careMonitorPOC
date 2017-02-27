@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Receiver
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let event of eventList">
+      <div *ngIf="event.inRange === false">
+        <ion-icon name="walk" color="danger" item-left></ion-icon>
+        <span> Left the house at {{event.eventTime | date:'shortTime'}}</span>
+      </div>
+      <div *ngIf="event.inRange === true">
+        <ion-icon name="home" color="secondary" item-left></ion-icon>
+        <span> Returned at {{event.eventTime | date:'shortTime'}}</span>
+      </div>
+    </ion-item>
+  </ion-list>
+</ion-content>

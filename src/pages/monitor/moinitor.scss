@@ -1,0 +1,16 @@
+page-monitor
+ {
+   .status {
+     margin-top: 100px;
+     color: white;
+     font-size: 100px;
+     text-align: center;
+   }
+    .in {
+      background-color: green;
+    }
+
+    .out {
+      background-color: red;
+    }
+}

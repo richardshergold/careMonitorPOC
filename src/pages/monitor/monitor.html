@@ -1,0 +1,11 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Monitor
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding [ngClass]="{ 'in': state.inRange == true, 'out':state.inRange === false }">
+  <p class="status">{{state.inRange === true?"IN":"OUT"}}</p>
+</ion-content>
