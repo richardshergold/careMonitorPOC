@@ -2,11 +2,11 @@
 
 Before looking at the code please view this video for an explanation and background:
 
-https://www.youtube.com/edit?o=U&video_id=WA9vrvJZYzo
+https://www.youtube.com/watch?v=WA9vrvJZYzo
 
 And then this video to see the app in action:
 
-https://www.youtube.com/edit?o=U&video_id=ON5xHlhNUMw
+https://www.youtube.com/watch?v=ON5xHlhNUMw
 
 careMonitor is an Ionic 2 proof of concept application that allows remote monitoring of a vulnerable person.  The person would
 require a beacon to be attached tp their wrist and a fixed device placed inside their house.  The application
