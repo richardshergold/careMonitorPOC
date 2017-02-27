@@ -34,7 +34,7 @@ export class FirebaseProvider {
 
   }
 
-  // return the list of events (sorted by the sort value)
+  // return the list of events 
   getEventList(): FirebaseListObservable<any> {
     return this.af.database.list('/events')
   }

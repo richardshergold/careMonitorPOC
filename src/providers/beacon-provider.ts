@@ -37,7 +37,6 @@ export class BeaconProvider {
         // subscribe to the delegate's didDetermineStateForRegion event which will be triggered
         // whenever we enter or leave the region
         this.delegate.didDetermineStateForRegion = function (data) {
-          console.log(JSON.stringify(data));
           let inRegion = data.state === "CLRegionStateOutside" ? false : true;
           state.stateReview(inRegion);
         };
