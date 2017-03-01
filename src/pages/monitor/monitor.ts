@@ -31,7 +31,7 @@ export class MonitorPage {
     this.zone = new NgZone({ enableLongStackTrace: false });
 
     // create an instance of the state class
-    this.state = new State();
+    this.state = new State(false);
 
     // subscribe to the observable on the state which returns
     // a result every time the status changes, when it does call the logEvent

@@ -3,13 +3,14 @@ import { Observable } from 'rxjs/Observable';
 export class State {
 
   // whether we are current in range of the beacon or not
-  inRange: boolean = false;
+  inRange: boolean;
 
   // our custom observable
   stateWatch: any;
   stateObserver: any;
 
-  constructor() {
+  constructor(initialState: boolean) {
+    this.inRange = initialState;
     // create a custom observable which will trigger a response whenever
     // the state changes
     this.stateWatch = Observable.create(observer => {
