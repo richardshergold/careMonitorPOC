@@ -13,6 +13,8 @@ require a beacon to be attached tp their wrist and a fixed device placed inside 
 would run on that device in "Monitor" mode.  You could run the app on another device in "Receiver" mode and be able to
 see the results of the monitoring in realtime.
 
+My aim was to show how easy it is to create a simple and (hopefully) elegant solution in Ionic.
+
 I have developed the application with best practice architecture in mind.  The components are thin lightweight components 
 that interact with services and models.  The State model has a custom observer on it which fires a response when the monitoring
 status changes (i.e whether or not the beacon moves IN range or OUT of range).  The monitor component subscribes to this
