@@ -1,7 +1,7 @@
 {
-  "name": "ionic-hello-world",
-  "author": "Ionic Framework",
-  "homepage": "http://ionicframework.com/",
+  "name": "careMonitor",
+  "author": "Richard Shergold",
+  "homepage": "http://www.crossplatformsolutions.co.uk/",
   "private": true,
   "scripts": {
     "clean": "ionic-app-scripts clean",
