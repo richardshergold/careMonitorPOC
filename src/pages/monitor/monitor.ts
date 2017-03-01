@@ -1,7 +1,6 @@
 // core stuff
 import { Component } from '@angular/core';
 import { NavController, Platform } from 'ionic-angular';
-import { NgZone } from "@angular/core";
 
 // providers
 import { BeaconProvider } from '../../providers/beacon-provider';
@@ -27,9 +26,6 @@ export class MonitorPage {
     public firebaseProvider: FirebaseProvider,
   ) {
 
-    // a zone required for UI update
-    this.zone = new NgZone({ enableLongStackTrace: false });
-
     // create an instance of the state class
     this.state = new State(false);
 
@@ -37,9 +33,7 @@ export class MonitorPage {
     // a result every time the status changes, when it does call the logEvent
     // method in the firebase service to log the event at the back-end
     this.state.stateWatch.subscribe(status => {
-      this.zone.run(() => {
-        this.firebaseProvider.logEvent(status);
-      });
+      this.firebaseProvider.logEvent(status);
     });
   }
 
