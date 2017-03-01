@@ -15,15 +15,16 @@ import { FirebaseProvider } from '../../providers/firebase-provider';
 export class ReceiverPage {
 
   eventList: FirebaseListObservable<any>;
-  zone: any
 
   constructor(
     public navCtrl: NavController,
     public firebaseProvider: FirebaseProvider
   ) {
 
+    // a very simple (thin!) componennt, all we do is subscribe to the FirebaseListObservable
+    // and then we can watch our data arrive instantly
+
     // get the event list from the provider
-    // (we have an async pipe in the template)
     this.firebaseProvider.getEventList()
       .subscribe((data) => {
         this.eventList = data;
