@@ -20,6 +20,9 @@ export class BeaconProvider {
 
   initialise(state: State): any {
 
+    // create a promise here just so we can initialise and then report back (even if just to console)
+    // wherher initialisation was performed correctly
+
     let promise = new Promise((resolve, reject) => {
 
       // we need to be running on a device 
@@ -45,7 +48,7 @@ export class BeaconProvider {
         IBeacon.startMonitoringForRegion(this.region)
           .then(
           () => {
-            resolve(true);
+            resolve(true);   // all ok - and we've commenced monitoring
           },
           error => {
             console.error('Failed to begin monitoring: ', error);
