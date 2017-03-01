@@ -8,11 +8,14 @@
 
 <ion-content>
   <ion-list>
+    <!--Our list of events from Firebase-->
     <ion-item *ngFor="let event of eventList">
+      <!--when inRange === false -->
       <div *ngIf="event.inRange === false">
         <ion-icon name="walk" color="danger" item-left></ion-icon>
         <span> Left the house at {{event.eventTime | date:'shortTime'}}</span>
       </div>
+      <!--when inRange === true -->
       <div *ngIf="event.inRange === true">
         <ion-icon name="home" color="secondary" item-left></ion-icon>
         <span> Returned at {{event.eventTime | date:'shortTime'}}</span>
